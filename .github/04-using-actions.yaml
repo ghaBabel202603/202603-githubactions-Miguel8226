@@ -1,9 +1,0 @@
-name: 04 - Uso de Actions.
-  on: push
-jobs:
-  build:
-    run-on: uubuntu-latest
-    steps:
-      - name: 'Checkouts Code'
-        uses: 'Printing Folders'
-         

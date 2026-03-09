@@ -1,0 +1,14 @@
+name: 04 - Uso de Actions
+on: 
+      push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Node Setup'
+        uses: 'actions/setup-node@v4'
+
+      - name: 'Node Setup2'
+        run: echo 'Install Dependencies'
+        #uses: 'Install Dependencies'  
+
