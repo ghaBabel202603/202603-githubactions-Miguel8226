@@ -1,5 +1,7 @@
 name: 05-06 - Filters and Activity Types
 run-name: 05-06 - Filtros y tipos de actividad ${{github.event_name}}
+#env:
+#    DEBUG_MODE: false
 on:
     workflow_dispatch:
         inputs:
@@ -9,13 +11,17 @@ on:
                 type: boolean
                 default: false
 jobs:
+    #env:
+    #    DEBUG_MODE: false
     echo:
         runs-on:  ubuntu-latest
         env:
-            DEBUG_MODE: false
+            DEBUG_MODE: true
         steps:
             - name: Show Message
-              run:  echo 'Workflow triggered by filters or activity types ${{ env.DEBUG_MODE }}'
+              run:  |
+                echo 'Workflow triggered by filters or activity types ${{ env.DEBUG_MODE }}'
+                echo 'Workflow triggered by filters or activity types ${{ vars.MY_VAR }}'
                 
                    
 
