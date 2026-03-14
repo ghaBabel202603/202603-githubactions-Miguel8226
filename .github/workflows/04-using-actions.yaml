@@ -14,7 +14,6 @@ jobs:
 
       - name: 'Install Dependencies'    
         working-directory: my-app            
-        run: |
-          cd my-app
+        run: |          
           npm ci 
         
