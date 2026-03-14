@@ -14,7 +14,7 @@ on:
                 description: 'Enable Debug mode'
                 required: false
                 type: boolean
-                default: 'false'
+                default: false
 jobs:
     echo:
         runs-on:  ubuntu-latest
