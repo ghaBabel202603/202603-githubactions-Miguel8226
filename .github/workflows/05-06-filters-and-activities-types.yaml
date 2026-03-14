@@ -2,10 +2,10 @@ name: 05-06 - Filters and Activity Types
 run-name: 05-06 - Filtros y tipos de actividad ${{github.event_name}}
 on:
     workflow_dispatch:
-        input:
+        inputs:
             debug:
                 description: 'Enable Debug mode'
-                required: true
+                required: false
                 type: boolean
                 default: false
 jobs:
@@ -19,7 +19,7 @@ jobs:
                 
                    
 
-#push:
+    #push:
     #    branches:
     #        - main
     #pull_request:
