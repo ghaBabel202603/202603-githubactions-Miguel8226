@@ -17,3 +17,6 @@ jobs:
             - name: Always step
               if: always()
               run: echo "Always step"
+            - name: Run on pull request with fix in title
+              if: github.event_name == 'pull_request' && contains(github.event.pull_request.title, 'fix')
+              run: echo "Bug fix detected"
