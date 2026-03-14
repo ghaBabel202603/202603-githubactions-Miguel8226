@@ -6,7 +6,8 @@ jobs:
      steps:
        - name: 'Checkout Code'          
          uses: actions/checkout@v4
+         
        - name: 'Printing Folders'
          run: |
-           echo "Estructura de carpetas después de descargar el código"
-           echo ls -l 
+           echo "Contenido del directorio actual:"
+           ls -l 
