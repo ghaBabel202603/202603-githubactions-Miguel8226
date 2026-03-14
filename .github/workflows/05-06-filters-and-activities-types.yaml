@@ -1,17 +1,28 @@
 name: 05-06 - Filters and Activity Types
+run-name: 05-06 - Filtros y tipos de actividad ${{ github.event_name }}
 on:
-    push:
-        branches:
-            - main
-    pull_request:
-        types: [opened, synchronize]
-        branches:
-            - develop
+    #push:
+    #    branches:
+    #        - main
+    #pull_request:
+    #    types: [opened, synchronize]
+    #    branches:
+    #        - develop
     workflow_dispatch:
+        input:
+            debug:
+                description: 'Debug mode'
+                required: false
+                default: 'false'
 jobs:
     echo:
         runs-on:  ubuntu-latest
+        env:
+            DEBUG_MODE: false
         steps:
-            - name: 'Show Message'
-              run:  echo 'Workflow triggered by filters or activity types'
+            - name: Show Message
+              run:  |
+                echo 'Workflow triggered by filters or activity types ${{ var.DESBUG_MODE }}'
+                
+                   
 

@@ -17,3 +17,8 @@ jobs:
         run: |          
           npm ci 
         
+
+    #- name: 'Printing Folders'
+    #  run: |
+    #    echo "Contenido del directorio actual:"
+    #    ls -l 
