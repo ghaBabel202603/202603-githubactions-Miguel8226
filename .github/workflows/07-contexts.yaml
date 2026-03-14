@@ -16,8 +16,6 @@ jobs:
                 echo 'run_number ${{ github.run_number }}' 
                     
             - name: 'Retrieve Variable'
-              run: |
-                echo 'el valor de mi variable es: ${{ vars.my_var }}'
-
+              run:  echo 'evento ${{ vars.My_Var }}'
 
           
