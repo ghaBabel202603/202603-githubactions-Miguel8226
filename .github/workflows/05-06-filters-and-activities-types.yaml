@@ -22,8 +22,7 @@ jobs:
             DEBUG_MODE: false
         steps:
             - name: Show Message
-              run:  |
-                echo 'Workflow triggered by filters or activity types ${{ env.DEBUG_MODE }}'
+              run:  echo 'Workflow triggered by filters or activity types ${{ env.DEBUG_MODE }}'
                 
                    
 
