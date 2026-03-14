@@ -1,5 +1,5 @@
 name: 05-06 - Filters and Activity Types
-run-name: 05-06 - Filtros y tipos de actividad ${{ github.event_name }}
+run-name: 05-06 - Filtros y tipos de actividad ${{github.event_name}}
 on:
     #push:
     #    branches:
@@ -11,8 +11,9 @@ on:
     workflow_dispatch:
         input:
             debug:
-                description: 'Debug mode'
+                description: 'Enable Debug mode'
                 required: false
+                type: boolean
                 default: 'false'
 jobs:
     echo:
@@ -22,7 +23,7 @@ jobs:
         steps:
             - name: Show Message
               run:  |
-                echo 'Workflow triggered by filters or activity types ${{ var.DESBUG_MODE }}'
+                echo 'Workflow triggered by filters or activity types ${{ env.DEBUG_MODE }}'
                 
                    
 
