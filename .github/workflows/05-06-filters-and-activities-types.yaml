@@ -5,7 +5,7 @@ on:
         input:
             debug:
                 description: 'Enable Debug mode'
-                required: false
+                required: true
                 type: boolean
                 default: false
 jobs:
