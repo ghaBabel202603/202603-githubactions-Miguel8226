@@ -8,14 +8,16 @@ jobs:
         steps:
             - name: 'Show Info'
               run:  echo 'evento ${{ github.event_name }}'
-                    echo 'ref ${{ github.ref }}'
-                    echo 'sha ${{ github.sha }}'
-                    echo 'actor ${{ github.actor }}'
-                    echo 'workflow ${{ github.workflow }}'
-                    echo 'run_id ${{ github.run_id }}'
-                    echo 'run_number ${{ github.run_number }}' 
-          #  - name: 'Retrieve Variable'
-          #      run: echo 'el valor de mi variable es: ${{ vars.my_var}}'
+                echo 'ref ${{ github.ref }}'
+                echo 'sha ${{ github.sha }}'
+                echo 'actor ${{ github.actor }}'
+                echo 'workflow ${{ github.workflow }}'
+                echo 'run_id ${{ github.run_id }}'
+                echo 'run_number ${{ github.run_number }}' 
+                    
+            - name: 'Retrieve Variable'
+              run: |
+                echo 'el valor de mi variable es: ${{ vars.my_var }}'
 
 
           
