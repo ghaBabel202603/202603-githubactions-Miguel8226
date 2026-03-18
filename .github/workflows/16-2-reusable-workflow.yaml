@@ -1,0 +1,16 @@
+name: 16 - 2 - Reusable Workflows
+on:
+  workflow_dispatch:
+jobs:
+    maindeploy:
+        uses: ./.github/workflows/16-1-reusable-workflow.yaml
+        with:
+            target-directory: 'src'
+    print-outputs:
+        runs-on: ubuntu-latest
+        needs: maindeploy
+        steps:
+            - name: Print outputs
+              run: |
+                echo "Build status: ${{ needs.maindeploy.outputs.build-status }}"
+                echo "Deployed URL: ${{ needs.maindeploy.outputs.url }}"
