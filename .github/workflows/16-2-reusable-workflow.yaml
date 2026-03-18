@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 jobs:
     maindeploy: #.github/workflows/16-1-reusable-workflow.yaml
-        uses: repos/16-1-reusable-workflow/.github/workflows/16-1-reusable-workflow.yaml@main
+        uses: Miguel8484/rep_prueba/.github/workflows/16-1-reusable-workflow.yaml@main#deploy
         with:
             target-directory: 'src'
     print-outputs:
