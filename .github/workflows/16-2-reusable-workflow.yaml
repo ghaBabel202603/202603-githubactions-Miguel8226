@@ -2,8 +2,8 @@ name: 16 - 2 - Reusable Workflows
 on:
   workflow_dispatch:
 jobs:
-    maindeploy: #.github/workflows/16-1-reusable-workflow.yaml
-        uses: Miguel8484/rep_prueba/.github/workflows/16-1-reusable-workflow.yaml@main#deploy
+    maindeploy: #.github/workflows/16-1-reusable-workflow.yaml #Miguel8484/rep_prueba/.github/workflows/16-1-reusable-workflow.yaml@main#deploy
+        uses: Miguel8226/rep_prueba/.github/workflows/16-1-reusable-workflow.yaml@main
         with:
             target-directory: 'src'
     print-outputs:
